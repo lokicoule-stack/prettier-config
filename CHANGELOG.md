@@ -1,5 +1,11 @@
 # @lokiverse/prettier-config
 
+## 0.2.1
+
+### Patch Changes
+
+- ef408e6: Add exports field for modern package entry point resolution
+
 ## 0.2.0
 
 ### Minor Changes
