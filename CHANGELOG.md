@@ -1,5 +1,15 @@
 # @lokiverse/prettier-config
 
+## 0.2.0
+
+### Minor Changes
+
+- c7ebef3: Add package.json sorting capabilities:
+
+  - Integrate `prettier-plugin-packagejson` for automated field sorting
+  - Add custom field ordering configuration
+  - Update documentation with sorting details
+
 ## 0.1.0
 
 ### Minor Changes
