@@ -3,35 +3,33 @@
   "version": "0.1.0",
   "private": false,
   "description": "Prettier configuration",
+  "keywords": [
+    "prettier",
+    "prettier-config"
+  ],
   "author": {
     "name": "Loïk Fekkaï",
     "email": "loikfekkai@gmail.com"
   },
   "license": "MIT",
-  "keywords": [
-    "prettier",
-    "prettier-config"
-  ],
+  "homepage": "https://github.com/lokicoule-stack/prettier-config/blob/main/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/lokicoule-stack/prettier-config.git"
   },
-  "homepage": "https://github.com/lokicoule-stack/prettier-config/blob/main/README.md",
   "bugs": {
     "url": "https://github.com/lokicoule-stack/prettier-config/issues"
-  },
-  "scripts": {
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "changeset publish"
   },
   "files": [
     "src/index.json"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "tag": "latest"
+  "scripts": {
+    "changeset": "changeset",
+    "release": "changeset publish",
+    "version-packages": "changeset version"
+  },
+  "dependencies": {
+    "prettier-plugin-packagejson": "^2.5.6"
   },
   "peerDependencies": {
     "prettier": "^3.0.0"
@@ -40,5 +38,11 @@
     "@changesets/cli": "^2.27.10",
     "@lokiverse/changesets-config": "^0.1.0",
     "prettier": "^3.0.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  },
+  "prettier": "./src/index.json"
 }

@@ -5,5 +5,91 @@
   "singleQuote": true,
   "quoteProps": "consistent",
   "singleAttributePerLine": true,
-  "htmlWhitespaceSensitivity": "ignore"
+  "htmlWhitespaceSensitivity": "ignore",
+  "plugins": ["prettier-plugin-packagejson"],
+  "overrides": [
+    {
+      "files": "package.json",
+      "options": {
+        "packageSortOrder": [
+          "name",
+          "displayName",
+          "version",
+          "private",
+          "description",
+          "publisher",
+          "keywords",
+          "categories",
+
+          "author",
+          "license",
+          "funding",
+          "sponsors",
+
+          "homepage",
+          "repository",
+          "bugs",
+          "documentation",
+
+          "type",
+          "main",
+          "module",
+          "types",
+          "typesVersions",
+          "exports",
+          "imports",
+          "files",
+          "bin",
+          "sideEffects",
+          "engines",
+
+          "scripts",
+          "workspaces",
+          "packageManager",
+
+          "dependencies",
+          "peerDependencies",
+          "peerDependenciesMeta",
+          "optionalDependencies",
+          "devDependencies",
+          "bundledDependencies",
+
+          "np",
+          "release-it",
+          "standard-version",
+
+          "config",
+          "publishConfig",
+          "directories",
+
+          "overrides",
+          "resolutions",
+          "pnpm",
+
+          "husky",
+          "simple-git-hooks",
+          "lint-staged",
+          "commitlint",
+
+          "eslintConfig",
+          "eslintIgnore",
+          "prettier",
+          "browserslist",
+          "babel",
+          "jest",
+          "postcss",
+          "stylelint",
+
+          "icon",
+          "activationEvents",
+          "contributes",
+
+          "c8",
+          "nyc",
+          "tap",
+          "ava"
+        ]
+      }
+    }
+  ]
 }

@@ -1,8 +1,10 @@
+# @lokiverse/prettier-config
+
 <div align="center">
-  <img src="https://github.com/lokicoule-stack/prettier-config/blob/main/media/repo-header.svg?raw=true" alt="Lokicoule Prettier Configuration" />
+ <img src="https://github.com/lokicoule-stack/prettier-config/blob/main/media/repo-header.svg?raw=true" alt="Lokicoule Prettier Configuration" />
 </div>
 
-Prettier configuration with minimal rules.
+Opinionated Prettier configuration with package.json sorting capabilities.
 
 ## Installation
 
@@ -12,7 +14,7 @@ pnpm add -D @lokiverse/prettier-config
 
 ## Usage
 
-Update `package.json`:
+Add to `package.json`:
 
 ```json
 {
@@ -20,41 +22,128 @@ Update `package.json`:
 }
 ```
 
-## Configuration
+## Configuration Details
 
-```javascript
+```json
 {
-  // Use official Prettier schema for validation
+  // Use official Prettier schema
   "$schema": "https://json.schemastore.org/prettierrc",
 
-  // Line length before wrapping
-  // Default: 80
+  // Line length: 100 characters
   "printWidth": 100,
 
-  // Use single quotes instead of double quotes
-  // true  => const x = 'test'
-  // false => const x = "test"
+  // No semicolons
+  "semi": false,
+
+  // Use single quotes
   "singleQuote": true,
 
-  // If you quote a property, quote all properties
-  // "as-needed"  => { foo: "bar", "quotedFoo": "bar" }
-  // "consistent" => { "foo": "bar", "quotedFoo": "bar" }
-  // "preserve"   => { foo: "bar", "quotedFoo": "bar" }
+  // Quote style for object properties
   "quoteProps": "consistent",
 
-  // Put each HTML attribute on a new line
-  // true:
-  // <button
-  //   class="btn"
-  //   onClick={click}>
-  //   Button
-  // </button>
+  // One attribute per line in HTML/JSX
   "singleAttributePerLine": true,
 
-  // Control whitespace sensitivity in HTML
-  // "css"     => Respect CSS display property
-  // "strict"  => Whitespace is considered significant
-  // "ignore"  => Whitespace is considered insignificant
-  "htmlWhitespaceSensitivity": "ignore"
+  // HTML whitespace handling
+  "htmlWhitespaceSensitivity": "ignore",
+
+  // Automated package.json sorting
+  "plugins": ["prettier-plugin-packagejson"]
 }
+```
+
+### Package.json Sorting
+
+```json
+[
+  // Package Identity
+  "name",
+  "displayName",
+  "version",
+  "private",
+  "description",
+  "publisher",
+  "keywords",
+  "categories",
+
+  // Legal & Authorship
+  "author",
+  "license",
+  "funding",
+  "sponsors",
+
+  // Documentation & Links
+  "homepage",
+  "repository",
+  "bugs",
+  "documentation",
+
+  // Package Configuration
+  "type",
+  "main",
+  "module",
+  "types",
+  "typesVersions",
+  "exports",
+  "imports",
+  "files",
+  "bin",
+  "sideEffects",
+  "engines",
+
+  // Project Configuration
+  "scripts",
+  "workspaces",
+  "packageManager",
+
+  // Dependencies
+  "dependencies",
+  "peerDependencies",
+  "peerDependenciesMeta",
+  "optionalDependencies",
+  "devDependencies",
+  "bundledDependencies",
+
+  // Release Management
+  "np",
+  "release-it",
+  "standard-version",
+
+  // Publishing
+  "config",
+  "publishConfig",
+  "directories",
+
+  // Package Resolution
+  "overrides",
+  "resolutions",
+  "pnpm",
+
+  // Development Tools
+  "husky",
+  "simple-git-hooks",
+  "lint-staged",
+  "commitlint",
+
+  // Tool Configuration
+  "eslintConfig",
+  "eslintIgnore",
+  "prettier",
+  "browserslist",
+  "babel",
+  "jest",
+  "postcss",
+  "stylelint",
+
+  // IDE & Extensions
+  "icon",
+  "activationEvents",
+  "contributes",
+
+  // Testing
+  "c8",
+  "nyc",
+  "tap",
+  "ava"
+]
 ```
