@@ -11,7 +11,6 @@
 ### Minor Changes
 
 - c7ebef3: Add package.json sorting capabilities:
-
   - Integrate `prettier-plugin-packagejson` for automated field sorting
   - Add custom field ordering configuration
   - Update documentation with sorting details
@@ -21,7 +20,6 @@
 ### Minor Changes
 
 - 057471e: Changes for initial release
-
   - Add changesets for version control
   - Set up NPM publishing configuration
   - Minimal Prettier configuration

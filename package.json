@@ -21,10 +21,13 @@
     "url": "https://github.com/lokicoule-stack/prettier-config/issues"
   },
   "exports": {
-    ".": "./src/index.json"
+    ".": "./src/index.json",
+    "./base": "./src/base.json",
+    "./lib": "./src/lib.json",
+    "./app": "./src/app.json"
   },
   "files": [
-    "src/index.json"
+    "src/*.json"
   ],
   "scripts": {
     "changeset": "changeset",
