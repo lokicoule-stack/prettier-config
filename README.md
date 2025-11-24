@@ -1,10 +1,8 @@
-# @lokiverse/prettier-config
-
 <div align="center">
- <img src="https://github.com/lokicoule-stack/prettier-config/blob/main/media/repo-header.svg?raw=true" alt="Lokiverse Prettier Configuration" />
+  <img src="https://github.com/lokicoule-stack/prettier-config/blob/main/media/repo-header.svg?raw=true" alt="Lokiverse Prettier Configuration" />
+  <br />
+  Shareable Prettier configurations for TypeScript projects.
 </div>
-
-Shareable Prettier configurations for TypeScript projects.
 
 ## Quick Start
 
